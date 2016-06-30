@@ -17,5 +17,6 @@ package() {
 	cd "${srcdir}/apricity-freezedry"
 	mkdir -p ${pkgdir}/usr/bin
 	cp -f freezedry.sh ${pkgdir}/usr/bin/freezedry
+	python setup.py install
 }
 # -*- mode: bash;-*-
