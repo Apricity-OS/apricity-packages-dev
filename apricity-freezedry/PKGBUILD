@@ -8,7 +8,6 @@ arch=('any')
 url='https://github.com/Apricity-OS/apricity-keyring'
 license=('GPL')
 depends=('python-pip' 'git')
-install="${pkgname}.install"
 source=('git+https://github.com/Apricity-OS/apricity-freezedry#branch=master')
 sha256sums=('SKIP')
 
@@ -17,6 +16,6 @@ package() {
 	cd "${srcdir}/apricity-freezedry"
 	mkdir -p ${pkgdir}/usr/bin
 	cp -f freezedry.sh ${pkgdir}/usr/bin/freezedry
-	python setup.py install
+	python setup.py install --prefix=/usr --root="$pkgdir" || return 1
 }
 # -*- mode: bash;-*-
