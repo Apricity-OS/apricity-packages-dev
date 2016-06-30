@@ -1,8 +1,0 @@
-post_upgrade() {
-	pip install git+https://github.com/Apricity-OS/apricity-freezedry.git --upgrade
-}
-
-post_install() {
-	pip install git+https://github.com/Apricity-OS/apricity-freezedry.git --upgrade
-}
-# -*- mode: bash;-*-
