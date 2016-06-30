@@ -7,7 +7,7 @@ pkgdesc='Apricity configuration tool'
 arch=('any')
 url='https://github.com/Apricity-OS/apricity-keyring'
 license=('GPL')
-depends=('python-pip')
+depends=('python-pip', 'git')
 install="${pkgname}.install"
 source=('git+https://github.com/Apricity-OS/apricity-freezedry#branch=master')
 sha256sums=('SKIP')
