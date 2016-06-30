@@ -8,12 +8,13 @@ arch=('any')
 url='https://github.com/Apricity-OS/apricity-keyring'
 license=('GPL')
 install="${pkgname}.install"
-source=('git+https://github.com/Apricity-OS/apricity-freezedry#branch=dev')
+source=('git+https://github.com/Apricity-OS/apricity-freezedry#branch=master')
 sha256sums=('SKIP')
 
 package() {
 	#cd "${srcdir}/${pkgname}-${pkgver}"
-	cd "${srcdir}/apricity-keyring"
-	cp freezedry.sh /usr/bin/freezedry
+	cd "${srcdir}/apricity-freezedry"
+	mkdir -p ${pkgdir}/usr/bin
+	cp -f freezedry.sh ${pkgdir}/usr/bin/freezedry
 }
 # -*- mode: bash;-*-
