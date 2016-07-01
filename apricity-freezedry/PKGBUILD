@@ -1,7 +1,7 @@
 # Maintainer: Alex Gajewski <agajews@gmail.com>
 
 pkgname=apricity-freezedry
-pkgver=0.1.7
+pkgver=0.1.8
 pkgrel=1
 pkgdesc='Apricity configuration tool'
 arch=('any')
@@ -16,6 +16,8 @@ package() {
 	cd "${srcdir}/apricity-freezedry"
 	mkdir -p ${pkgdir}/usr/bin
 	cp -f freezedry.sh ${pkgdir}/usr/bin/freezedry
+	mkdir -p ${pkgdir}/etc/freezedry
+	cp -f gdm-xsession-format.sh ${pkgdir}/etc/freezedry
 	python setup.py install --prefix=/usr --root="$pkgdir" || return 1
 }
 # -*- mode: bash;-*-
