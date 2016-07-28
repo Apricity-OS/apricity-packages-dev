@@ -2,7 +2,7 @@
 
 _pkgname='Apricity Themes'
 pkgname=apricity-themes-gnome
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc='Gnome Assets for Apricity OS'
 arch=(any)
@@ -19,7 +19,8 @@ install="apricity-themes-gnome.install"
 package() {
 	rm -rf "${pkgdir}/usr/share/themes/Arctic Apricity"
 	mkdir -p "${pkgdir}/usr/share/themes"
-	mkdir -p "${pkgdir}/etc/skel/.config/autostart"
+	# mkdir -p "${pkgdir}/etc/skel/.config/autostart"
+	cp -rf ${srcdir}/apricity-themes-gnome/extensions/* "${pkgdir}/usr/share/gnome-shell/extensions"
 	cp -rf "${srcdir}/apricity-themes-gnome/Arctic Apricity" "${pkgdir}/usr/share/themes"
-	cp -f "${srcdir}/apricity-themes-gnome/firstrun-desktop.sh" "${pkgdir}/etc/skel/.config/autostart"
+	# cp -f "${srcdir}/apricity-themes-gnome/firstrun-desktop.sh" "${pkgdir}/etc/skel/.config/autostart"
 }
