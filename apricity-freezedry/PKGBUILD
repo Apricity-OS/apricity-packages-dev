@@ -18,6 +18,7 @@ package() {
 	cp -f freezedry.sh ${pkgdir}/usr/bin/freezedry
 	mkdir -p ${pkgdir}/etc/freezedry
 	cp -f gdm-xsession-format.sh ${pkgdir}/etc/freezedry
+	cp -f gdm-custom-format.conf ${pkgdir}/etc/freezedry
 	python setup.py install --prefix=/usr --root="$pkgdir" || return 1
 }
 # -*- mode: bash;-*-
