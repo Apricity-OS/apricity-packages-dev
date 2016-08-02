@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Apricity-OS/apricity-themes-gnome"
 depends=()
 replaces=(apricity-themes)
-conflicts=(apricity-themes, apricity-themes-cinnamon)
+# conflicts=(apricity-themes, apricity-themes-cinnamon)
 provides=(apricity-themes)
 source=("git+https://github.com/Apricity-OS/apricity-themes-gnome#branch=dev")
 sha256sums=('SKIP')
