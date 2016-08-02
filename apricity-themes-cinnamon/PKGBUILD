@@ -10,8 +10,8 @@ license=(GPL)
 url="https://github.com/Apricity-OS/apricity-themes-cinnamon"
 depends=()
 replaces=(apricity-themes)
-conflicts=(apricity-themes, apricity-themes-gnome)
-provides=(apricity-themes)
+# conflicts=(apricity-themes, apricity-themes-gnome)
+provides=(apricity-themes, apricity-themes-gnome)
 source=("git+https://github.com/Apricity-OS/apricity-themes-cinnamon#branch=dev")
 sha256sums=('SKIP')
 install="apricity-themes-cinnamon.install"
