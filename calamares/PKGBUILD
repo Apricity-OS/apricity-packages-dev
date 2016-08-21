@@ -1,7 +1,7 @@
 pkgname=calamares
 _pointver=2
 pkgver=2.3.${_pointver}
-pkgrel=11
+pkgrel=12
 pkgdesc='Distribution-independent installer framework'
 arch=('x86_64' 'i686')
 license=(GPL)
@@ -28,11 +28,21 @@ build() {
 
 	mkdir -p build
 	cd build
-        cmake .. \
-              -DCMAKE_BUILD_TYPE=Release \
-              -DCMAKE_INSTALL_PREFIX=/usr \
-              -DWITH_PARTITIONMANAGER=1 \
-              -DCMAKE_INSTALL_LIBDIR=lib
+	if ['$CARCH' -eq 'x86_64']; then
+            cmake .. \
+                  -DCMAKE_BUILD_TYPE=Release \
+                  -DCMAKE_INSTALL_PREFIX=/usr \
+                  -DWITH_PARTITIONMANAGER=1 \
+                  -DCMAKE_INSTALL_LIBDIR=lib
+	else
+            cmake .. \
+                  -DCMAKE_BUILD_TYPE=Release \
+                  -DCMAKE_INSTALL_PREFIX=/usr \
+                  -DWITH_PARTITIONMANAGER=1 \
+                  -DCMAKE_INSTALL_LIBDIR=lib \
+		  -DCMAKE_CXX_FLAGS=-m32 \
+		  -DCMAKE_C_FLAGS=-m32
+	fi
         make
 }
 
