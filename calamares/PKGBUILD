@@ -28,7 +28,8 @@ build() {
 
 	mkdir -p build
 	cd build
-	if ["$CARCH" = 'x86_64']; then
+	if [ "$CARCH" == "x86_64" ]
+	then
             cmake .. \
                   -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_INSTALL_PREFIX=/usr \
