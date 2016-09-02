@@ -14,7 +14,7 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-source=("git+https://github.com/Apricity-OS/calamares#branch=dev")
+source=("git+https://github.com/Apricity-OS/calamares32#branch=dev")
 
 sha256sums=('SKIP')
 
