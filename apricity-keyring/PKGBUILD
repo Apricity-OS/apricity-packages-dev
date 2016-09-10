@@ -4,13 +4,14 @@
 # Maintainer: Alex Gajewski <agajews@gmail.com>
 
 pkgname=apricity-keyring
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc='Apricity PGP keyring'
 arch=('any')
 url='https://github.com/Apricity-OS/apricity-keyring'
 license=('GPL')
 install="${pkgname}.install"
+makedepends=('git')
 source=('git+https://github.com/Apricity-OS/apricity-keyring#branch=dev')
 sha256sums=('SKIP')
 
