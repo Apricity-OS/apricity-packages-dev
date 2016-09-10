@@ -2,13 +2,14 @@
 
 _pkgname='Apricity Icons'
 pkgname=apricity-icons
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc='Icons for Apricity OS'
 arch=(any)
 license=(GPL)
 url="https://github.com/Apricity-OS/apricity-icons"
 depends=()
+makedepends=('git')
 source=("git+https://github.com/Apricity-OS/apricity-icons#branch=dev")
 sha256sums=('SKIP')
 
