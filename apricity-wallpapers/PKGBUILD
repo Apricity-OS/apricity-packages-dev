@@ -2,13 +2,14 @@
 
 _pkgname='Apricity Wallpapers'
 pkgname=apricity-wallpapers
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc='Wallpapers for Apricity OS'
 arch=(any)
 license=(GPL)
 url="https://github.com/Apricity-OS/apricity-wallpapers"
 depends=()
+makedepends=('git')
 source=("git+https://github.com/Apricity-OS/apricity-wallpapers#branch=dev")
 sha256sums=('SKIP')
 install=apricity-wallpapers.install
