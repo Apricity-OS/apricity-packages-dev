@@ -1,4 +1,4 @@
-pkgname=calamares32
+pkgname=calamares
 _pointver=2
 pkgver=2.3.${_pointver}
 pkgrel=19
