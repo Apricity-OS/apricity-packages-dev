@@ -1,7 +1,7 @@
 pkgname=calamares32
 _pointver=2
 pkgver=2.3.${_pointver}
-pkgrel=18
+pkgrel=19
 pkgdesc='Distribution-independent installer framework'
 arch=('i686')
 license=(GPL)
@@ -14,7 +14,7 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-source=("git+https://github.com/Apricity-OS/calamares32#branch=dev")
+source=("git+https://github.com/Apricity-OS/calamares#branch=dev32")
 
 sha256sums=('SKIP')
 
